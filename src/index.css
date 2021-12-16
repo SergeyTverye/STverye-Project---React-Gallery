@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&display=swap');
+
+*{
+  box-sizing: border-box;
+}
+
+body{
+  font-family: "Noto Serif";
+  color: #4e4e4e;
+}
+.App{
+  max-width: 960px;
+  margin: 0 auto;
+}
+.title h1{
+  color: #8c4846;
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+  font-weight: bold;
+}
+
+.logo{
+}
+
+.title h2, .title p{
+  text-align: center;
+}
+.title h2{
+  margin-top: 60px;
+  font-size: 2.6rem;
+}
+
+form{
+  margin: 30px auto 10px;
+  text-align: center;
+}
+label input{
+  height: 0;
+  width: 0;
+  opacity: 0;
+}
+
+label{
+  display: block;
+  width: 30px;
+  height: 30px;
+  border: 2px solid #e37972;
+  border-radius: 50%;
+  margin: 10px auto;
+  line-height: 28px;
+  color: #e37972;
+  font-weight: bold;
+  font-size: 30px;
+  cursor: pointer;
+}
+label:hover{
+  background: #e37972;
+  color: white;
+}
+.output{
+  height: 60px;
+  font-size: 0.8rem;
+}
+.error{
+  color: #ff4a4a;
+}
+.progress-bar{
+  height: 5px;
+  background: #e37972;
+  margin-top: 20px;
+}
+
+.images-grid{
+  margin: 20px auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 40px;
+}
+
+.images-grid__img-wrapper{
+  overflow: hidden;
+  height: auto;
+  display: flex;
+  align-items: center;
+  align-content: center;
+}
+
+.images-grid__img-wrapper img{
+  width: calc(98% - 32px);
+  object-fit: contain;
+  margin: 0 auto;
+}
+
+.modal_window{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+}
+
+.modal_window__img{
+  display: block;
+  max-width: 60%;
+  min-width: 40%;
+  max-height: 80%;
+  margin: 50px auto;
+  box-shadow: 3px 5px 7px rgba(0,0,0,0.5);
+  border: 3px solid white;
+}
+
+.PageNotFound {
+  text-align: center;
+}
+
+.gallery__title{
+  text-align: center;
+}
+
+.title__about{
+  display: flex;
+  justify-content: flex-end
+}
+
+
+.title__about a {
+  color: #ce837f;
+  font-size: 1rem;
+  font-weight: bolder;
+  margin-left: 5px;
+}
+
+.login__button {
+  appearance: none;
+  border: 0;
+  border-radius: 5px;
+  background: #e37972;
+  color: #fff;
+  padding: 8px 16px;
+  font-size: 16px;
+}
+
+.chat__messageform{
+  width: 100%;
+}
+
+.chat__textbox{
+  margin-top: 15px;
+  width: 100%;
+  height: 70vh;
+  border: 1px solid #e37972;
+  overflow-y: auto;
+  border-radius: 1%;
+}
+
+.chat__textinput{
+  margin-top: 10px;
+  width: 100%;
+  height: 10vh;
+  border: 1px solid #e37972;
+  border-radius: 10px;
+}
+
+.chat__sendbutton{
+  appearance: none;
+  border: 0;
+  border-radius: 5px;
+  background: #e37972;
+  color: #fff;
+  padding: 8px 16px;
+  font-size: 16px;
+}
