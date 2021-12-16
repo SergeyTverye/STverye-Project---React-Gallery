@@ -22,6 +22,10 @@ export const publicRoutes = [
 
 export const privateRoutes = [
     {
+        path: '/guestbook',
+        element: <GuestBook/>
+    },
+    {
         path: '/',
         element: <Gallery/>
     },
@@ -32,9 +36,5 @@ export const privateRoutes = [
     {
         path: '/login',
         element: <Login/>
-    },
-    {
-        path: '/guestbook',
-        element: <GuestBook/>
     },
 ]

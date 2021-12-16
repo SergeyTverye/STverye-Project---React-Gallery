@@ -27,7 +27,8 @@ const AppRouter = () => {
                 {publicRoutes.map(({path, element}) =>
                     <Route key={path} path={path} element={element} exact={true}/>
                 )}
-                <Route path="*" element={<Login/>} />
+                <Route path="/guestbook" element={<Login/>} />
+                <Route path="*" element={<PageNotFind404/>} />
             </Routes>
         )
 };
