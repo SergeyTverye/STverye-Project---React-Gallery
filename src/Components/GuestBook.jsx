@@ -9,7 +9,7 @@ const GuestBook = () => {
     const {auth} = useContext(Context)
     const [user] = useAuthState(auth)
     const [value, setValue] = useState('')
-    const [messages, loading] = useCollectionData(
+    const [messages] = useCollectionData(
         firestore.collection('messages').orderBy('createdAt'))
 
     const sendMessage = async () => {
@@ -36,7 +36,7 @@ const GuestBook = () => {
                         borderRadius: '10px'
                     }}>
                         <div>
-                            <img src={message.photoURL} />
+                            <img src={message.photoURL} alt="avatar"/>
                             <div>{message.displayName}</div>
                         </div>
                         <div>{message.text}</div>

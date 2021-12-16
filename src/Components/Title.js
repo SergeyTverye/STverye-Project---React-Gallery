@@ -1,5 +1,5 @@
 import React, {useContext} from 'react';
-import {NavLink, useNavigate} from "react-router-dom";
+import { useNavigate} from "react-router-dom";
 import {Link} from 'react-router-dom';
 import {Context} from "../index";
 import {useAuthState} from "react-firebase-hooks/auth";

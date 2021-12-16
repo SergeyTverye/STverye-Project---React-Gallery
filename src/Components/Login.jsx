@@ -16,7 +16,7 @@ const Login = () => {
 
             <p>Here you can login with google!</p>
 
-            <button className="chat__sendbutton" onClick={login} className="login__button">
+            <button className="chat__sendbutton" onClick={login}>
                 Login
             </button>
         </div>

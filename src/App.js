@@ -1,6 +1,5 @@
-import React, {useState} from 'react';
+import React from 'react';
 import Title from './Components/Title';
-import Gallery from "./Components/Gallery";
 import {BrowserRouter} from "react-router-dom";
 import AppRouter from "./Components/AppRouter";
 

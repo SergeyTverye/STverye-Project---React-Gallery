@@ -1,6 +1,6 @@
 import React, {useContext} from 'react';
 import {Routes} from "react-router-dom";
-import { Route, Navigate } from "react-router-dom";
+import { Route } from "react-router-dom";
 import { privateRoutes, publicRoutes} from "../Config/routes";
 import PageNotFind404 from "./PageNotFind404";
 import Login from "./Login";
