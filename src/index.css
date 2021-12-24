@@ -131,6 +131,14 @@ label:hover{
   margin-left: 5px;
 }
 
+.title__about div {
+  color: #ce837f;
+  font-size: 1rem;
+  font-weight: bolder;
+  margin-left: 5px;
+  text-decoration: underline;
+}
+
 .login__button {
   appearance: none;
   border: 0;
@@ -170,4 +178,15 @@ label:hover{
   color: #fff;
   padding: 8px 16px;
   font-size: 16px;
+}
+
+.pagination {
+  display: flex;
+}
+
+.pagination__page{
+  font-size: 16px;
+  border-right: 2px solid #e37972;
+  padding: 4px;
+  font-weight: 600;
 }

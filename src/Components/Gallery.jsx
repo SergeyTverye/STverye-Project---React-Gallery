@@ -1,11 +1,13 @@
-import React, {useState} from 'react';
+import React, { useState} from 'react';
 import UploadForm from "./UploadForm/UploadForm";
 import ImagesGrid from "./ImagesGrid";
 import Modal from "./Modal";
 
 const Gallery = () => {
     const  [selectedImg, setSelectedImg] = useState(null)
+
     return (
+
         <div>
             <div className="gallery__title">
                 <h2>Some Pictures</h2>
