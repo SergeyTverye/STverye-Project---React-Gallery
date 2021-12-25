@@ -10,18 +10,21 @@ const useStorage = (file) => {
         const storage  = appStorage.ref(file.name);
         const imagesList = appDataBase.collection('images')
 
-        storage.put(file).on('state_changed', (snap) =>
-        {
-            let percents = (snap.bytesTransferred / snap.totalBytes) * 100
-            setProgress(percents)
-        }, (error) => {
-            setError(error)
-        }, async () => {
-                const url = await storage.getDownloadURL();
-                imagesList.add({url, createdAt: serverTime()})
-                setUrl(url)
+        storage.put(file).on('state_changed',
+            (snap) =>
+            {
+                let percents = (snap.bytesTransferred / snap.totalBytes) * 100
+                setProgress(percents)
+            },
+                (error) => {
+                setError(error)
+            },
+                async () => {
+                    const url = await storage.getDownloadURL();
+                    imagesList.add({url, createdAt: serverTime()})
+                    setUrl(url)
             }
-            );
+        );
     }, [file])
 
     return {progress, url, error}

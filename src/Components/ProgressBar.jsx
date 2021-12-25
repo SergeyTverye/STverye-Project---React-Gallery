@@ -1,10 +1,9 @@
 import React, {useEffect} from 'react';
 import useStorage from "../Hooks/useStorage";
 
-const ProgressBas = ({file, setFile}) => {
+const ProgressBar = ({file, setFile}) => {
 
     const {url, progress } = useStorage(file)
-    console.log(progress, url)
 
     useEffect(()=> {
         // Если вернулся url адрес, то сбросить состояние файла,
@@ -23,4 +22,4 @@ const ProgressBas = ({file, setFile}) => {
     );
 };
 
-export default ProgressBas;
+export default ProgressBar;

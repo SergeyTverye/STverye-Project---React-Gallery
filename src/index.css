@@ -162,6 +162,31 @@ label:hover{
   border-radius: 1%;
 }
 
+.chat__user{
+  display: flex;
+  align-items: center;
+}
+.chat__user img{
+  height: 40px;
+  margin-right: 5px;
+}
+
+.chat__user div{
+font-weight: 600;
+}
+
+.chat__message{
+  min-width: 200px;
+  margin: 5px;
+  border-bottom: 1px solid slategrey;
+  width: fit-content;
+  padding: 5px;
+}
+
+.chat__message-text {
+  padding: 0 10px;
+}
+
 .chat__textinput{
   margin-top: 10px;
   width: 100%;
@@ -178,6 +203,7 @@ label:hover{
   color: #fff;
   padding: 8px 16px;
   font-size: 16px;
+  margin-top: 4px;
 }
 
 .pagination {

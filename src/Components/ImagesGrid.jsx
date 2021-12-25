@@ -9,6 +9,8 @@ const ImagesGrid = ({setSelectedImg}) => {
     const [imagesPerPage, setImagesPerPage] = useState([]) //массив с картинками текущей страницы
     const [CurrentPage, setCurrentPage] = useState(1) //текущая страница
 
+    const perPageLimit = 6
+
     useEffect(() => {
         if(docs){
             setPages(Math.ceil(docs.length / 6))
@@ -19,7 +21,7 @@ const ImagesGrid = ({setSelectedImg}) => {
             setPagesNow(pagesArray);
             if(docs.length > 0) {
                 let images = docs.filter((img,index)=>{
-                    return index > CurrentPage*6-6-1 && index < CurrentPage*6
+                    return index > CurrentPage*perPageLimit-perPageLimit-1 && index < CurrentPage*perPageLimit
                 })
             setImagesPerPage(images)
             }

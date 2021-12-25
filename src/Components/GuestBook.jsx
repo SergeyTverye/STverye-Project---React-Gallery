@@ -1,16 +1,16 @@
 import React, {useContext, useState} from 'react';
 import {Context} from "../index";
 import {useAuthState} from "react-firebase-hooks/auth";
-import {useCollectionData} from "react-firebase-hooks/firestore";
 import firebase from "firebase/compat";
+import useFirestore from "../Hooks/useFirestore";
 
 const GuestBook = () => {
-    const firestore = firebase.firestore()
     const {auth} = useContext(Context)
     const [user] = useAuthState(auth)
+    const firestore = firebase.firestore()
     const [value, setValue] = useState('')
-    const [messages] = useCollectionData(
-        firestore.collection('messages').orderBy('createdAt'))
+
+    const messages = useFirestore('messages', 'asc')
 
     const sendMessage = async () => {
         firestore.collection('messages').add({
@@ -26,20 +26,20 @@ const GuestBook = () => {
     return (
         <div>
             <div className="chat__textbox">
-                {messages && messages.map(message =>
-                    <div style={{
-                        margin: 10,
-                        border: user.uid === message.uid ? '2px solid #d28884'
-                            : '2px solid #8c4846',
-                        width: 'fit-content',
-                        padding: '5px',
-                        borderRadius: '10px'
-                    }}>
-                        <div>
+                {messages.docs && messages.docs.map(message =>
+                    <div key={message.createdAt}
+                         className='chat__message'>
+                        <div className="chat__user">
                             <img src={message.photoURL} alt="avatar"/>
-                            <div>{message.displayName}</div>
+                            <div
+                            style={{
+                                color: user.uid === message.uid ? '#a13327'
+                                : 'black',
+                            }}
+
+                            >{message.displayName}</div>
                         </div>
-                        <div>{message.text}</div>
+                        <div className="chat__message-text">{message.text}</div>
                     </div>
                 )}
             </div>
